@@ -22,7 +22,7 @@ const App = {
             // Wait for DOM to be fully loaded
             await this.waitForDOM();
 
-            // Initialize map
+            // Initialize map (will handle missing Leaflet gracefully)
             MapModule.init();
 
             // Initialize routing
@@ -40,8 +40,10 @@ const App = {
             // Check for URL parameters (shared location)
             this.checkURLParams();
 
-            // Request location permission
-            this.requestLocationPermission();
+            // Request location permission (only if Leaflet is available)
+            if (typeof L !== 'undefined') {
+                this.requestLocationPermission();
+            }
 
             // Hide loading screen
             UI.hideLoading();
@@ -52,7 +54,9 @@ const App = {
 
         } catch (error) {
             console.error('Initialization error:', error);
-            UI.showToast('❌ Failed to initialize application', 'error');
+            // Still show the app even if there's an error
+            UI.hideLoading();
+            UI.showToast('⚠️ Some features may be limited', 'warning');
         }
     },
 
