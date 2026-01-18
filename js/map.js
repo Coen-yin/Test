@@ -337,7 +337,7 @@ const MapModule = {
                     background: #ffffff;
                     border: 3px solid white;
                     border-radius: 50%;
-                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
                     position: relative;
                 ">
                     <div style="
@@ -347,7 +347,7 @@ const MapModule = {
                         transform: translate(-50%, -50%);
                         width: 40px;
                         height: 40px;
-                        background: rgba(255, 255, 255, 0.2);
+                        background: rgba(0, 0, 0, 0.1);
                         border-radius: 50%;
                         animation: pulse 2s ease-in-out infinite;
                     "></div>
