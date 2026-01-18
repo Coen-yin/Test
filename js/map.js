@@ -517,7 +517,7 @@ const MapModule = {
         const marker = L.circleMarker(latlng, {
             radius: 6,
             fillColor: '#ffffff',
-            color: '#fff',
+            color: '#333',
             weight: 2,
             fillOpacity: 1
         }).addTo(this.map);
@@ -529,6 +529,7 @@ const MapModule = {
             this.measureLine = L.polyline(latlngs, {
                 color: '#ffffff',
                 weight: 3,
+                opacity: 0.9,
                 dashArray: '5, 10'
             }).addTo(this.map);
         }
