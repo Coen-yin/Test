@@ -66,7 +66,7 @@ const MapModule = {
                 align-items: center;
                 justify-content: center;
                 height: 100%;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
                 color: white;
                 padding: 2rem;
                 text-align: center;
@@ -334,10 +334,10 @@ const MapModule = {
                 <div style="
                     width: 20px;
                     height: 20px;
-                    background: #667eea;
+                    background: #ffffff;
                     border: 3px solid white;
                     border-radius: 50%;
-                    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
                     position: relative;
                 ">
                     <div style="
@@ -347,7 +347,7 @@ const MapModule = {
                         transform: translate(-50%, -50%);
                         width: 40px;
                         height: 40px;
-                        background: rgba(102, 126, 234, 0.2);
+                        background: rgba(255, 255, 255, 0.2);
                         border-radius: 50%;
                         animation: pulse 2s ease-in-out infinite;
                     "></div>
@@ -422,7 +422,7 @@ const MapModule = {
                 <div style="
                     width: 30px;
                     height: 30px;
-                    background: linear-gradient(135deg, #667eea, #764ba2);
+                    background: linear-gradient(135deg, #ffffff, #ffffff);
                     border: 3px solid white;
                     border-radius: 50% 50% 50% 0;
                     transform: rotate(-45deg);
@@ -456,7 +456,7 @@ const MapModule = {
      * @param {Array} coordinates - Array of [lat, lng] coordinates
      * @param {string} color - Route color
      */
-    drawRoute(coordinates, color = '#667eea') {
+    drawRoute(coordinates, color = '#ffffff') {
         // Remove existing route
         if (this.routeLayer) {
             this.map.removeLayer(this.routeLayer);
@@ -516,7 +516,7 @@ const MapModule = {
     addMeasurePoint(latlng) {
         const marker = L.circleMarker(latlng, {
             radius: 6,
-            fillColor: '#667eea',
+            fillColor: '#ffffff',
             color: '#fff',
             weight: 2,
             fillOpacity: 1
@@ -527,7 +527,7 @@ const MapModule = {
         if (this.measureMarkers.length === 2) {
             const latlngs = this.measureMarkers.map(m => m.getLatLng());
             this.measureLine = L.polyline(latlngs, {
-                color: '#667eea',
+                color: '#ffffff',
                 weight: 3,
                 dashArray: '5, 10'
             }).addTo(this.map);

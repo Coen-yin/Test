@@ -161,9 +161,9 @@ This is pure HTML, CSS, and JavaScript - no npm, no webpack, no build tools need
 Edit CSS custom properties in `css/styles.css`:
 ```css
 :root {
-    --primary: #667eea;
-    --secondary: #764ba2;
-    --accent: #f093fb;
+    --primary: #ffffff;
+    --secondary: #ffffff;
+    --accent: #ffffff;
     /* ... more colors */
 }
 ```
